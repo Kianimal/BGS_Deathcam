@@ -3,6 +3,8 @@ Config = {}
 Config.MaxZoomDistance = 10.0
 Config.MaxPanDistance = 2.5
 
+Config.MutePlayerOnDeath = false
+
 Config.ControlAction = {
     ZoomOut = 0x06052D11,   -- Q KEY
     ZoomIn = 0x26E9DC00,    -- Z KEY

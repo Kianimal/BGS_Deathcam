@@ -72,6 +72,16 @@ CreateThread(function()
 
 			SetCamRot(cam, -90.0, 0.0, 0.0)
 
+			if Config.MutePlayerOnDeath then
+				DisableAllControlActions(0)
+				EnableControlAction(0, Config.ControlAction.ZoomOut, true)
+				EnableControlAction(0, Config.ControlAction.ZoomIn, true)
+				EnableControlAction(0, Config.ControlAction.PanUp, true)
+				EnableControlAction(0, Config.ControlAction.PanDown, true)
+				EnableControlAction(0, Config.ControlAction.PanLeft, true)
+				EnableControlAction(0, Config.ControlAction.PanRight, true)
+			end
+
 			while IsControlPressed(0, Config.ControlAction.ZoomOut) do
 				Wait(1)
 				newZ = newZ + 0.09
